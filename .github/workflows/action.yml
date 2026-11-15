@@ -1,11 +1,17 @@
-name: Supply Chain Security Lab
-description: Controlled credential exposure simulation
+name: Supply Chain Lab
 
-inputs:
-  canary:
-    description: Dummy laboratory credential
-    required: true
+on:
+  workflow_dispatch:
 
-runs:
-  using: node24
-  main: index.js
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Execute upstream action
+        uses: YOUR_USERNAME/action-lab@v1
+        with:
+          canary: ${{ secrets.LAB_CANARY }}
