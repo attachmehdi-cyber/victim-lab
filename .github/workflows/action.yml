@@ -1,0 +1,11 @@
+name: Supply Chain Security Lab
+description: Controlled credential exposure simulation
+
+inputs:
+  canary:
+    description: Dummy laboratory credential
+    required: true
+
+runs:
+  using: node24
+  main: index.js
