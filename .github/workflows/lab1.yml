@@ -1,0 +1,17 @@
+name: Supply Chain Lab
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Execute upstream action
+        uses: attachmehdi-cyber/action-lab@v1
+        with:
+          canary: ${{ secrets.LAB_CANARY }}
