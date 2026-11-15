@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - name: Execute upstream action
-        uses: YOUR_USERNAME/action-lab@v1
+        uses: attachmehdi-cyber/action-lab@v1
         with:
           canary: ${{ secrets.LAB_CANARY }}
